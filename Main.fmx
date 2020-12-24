@@ -1,0 +1,657 @@
+object fmMain: TfmMain
+  Left = 382
+  Top = 180
+  Caption = 'Debug REST Server'
+  ClientHeight = 480
+  ClientWidth = 640
+  Position = Designed
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  Left = 382
+  Top = 180
+  DesignerMasterStyle = 0
+  object pSend: TPanel
+    Align = Left
+    Size.Width = 314.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object gbDataToSend: TGroupBox
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      Position.X = 12.000000000000000000
+      Position.Y = 86.000000000000000000
+      Size.Width = 288.000000000000000000
+      Size.Height = 381.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Data to send to REST Server:'
+      TabOrder = 0
+      object cbModelDataToSend: TComboBox
+        DropDownCount = 25
+        ItemWidth = 300.000000000000000000
+        PopupMenu = PopupMenu
+        Position.X = 8.000000000000000000
+        Position.Y = 19.000000000000000000
+        Size.Width = 190.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        OnChange = cbModelDataToSendChange
+        OnClick = cbModelDataToSendClick
+      end
+      object btModelDataToSendAdd: TButton
+        Action = aAddModel
+        Enabled = True
+        Images = ImageList
+        ImageIndex = 2
+        PopupMenu = PopupMenu
+        Position.X = 202.000000000000000000
+        Position.Y = 19.000000000000000000
+        Size.Width = 22.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        ParentShowHint = False
+        ShowHint = True
+      end
+      object btModelDataToSendMenu: TButton
+        Hint = 'Show model menu'
+        Images = ImageList
+        ImageIndex = 3
+        Position.X = 256.000000000000000000
+        Position.Y = 19.000000000000000000
+        Size.Width = 22.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Model menu'
+        ParentShowHint = False
+        ShowHint = True
+        OnClick = btModelDataToSendMenuClick
+      end
+      object eDataToSendURI: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akTop, akRight]
+        TabOrder = 6
+        Position.X = 80.000000000000000000
+        Position.Y = 48.000000000000000000
+        Size.Width = 200.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'URI'
+        OnChangeTracking = DataToSendChange
+      end
+      object cbDataToSendMethod: TComboBox
+        Items.Strings = (
+          'POST'
+          'PUT'
+          'GET'
+          'DELETE'
+          'PATCH')
+        ItemIndex = 2
+        Position.X = 9.000000000000000000
+        Position.Y = 48.000000000000000000
+        Size.Width = 64.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        OnChange = DataToSendChange
+      end
+      object btModelDataToSendSave: TButton
+        Action = aSaveModel
+        Enabled = False
+        Images = ImageList
+        ImageIndex = 0
+        Position.X = 228.000000000000000000
+        Position.Y = 19.000000000000000000
+        Size.Width = 22.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        ParentShowHint = False
+        ShowHint = True
+      end
+      object tcDataToSend: TTabControl
+        Anchors = [akLeft, akTop, akRight, akBottom]
+        Position.X = 10.000000000000000000
+        Position.Y = 80.000000000000000000
+        Size.Width = 269.000000000000000000
+        Size.Height = 290.000000000000000000
+        Size.PlatformDefault = False
+        TabHeight = 25.000000000000000000
+        TabIndex = 0
+        TabOrder = 8
+        TabPosition = PlatformDefault
+        Sizes = (
+          269s
+          265s
+          269s
+          265s)
+        object tiDataToSendJSON: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = True
+          Size.Width = 133.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'JSON'
+          ExplicitSize.cx = 49.000000000000000000
+          ExplicitSize.cy = 26.000000000000000000
+          object mDataToSend: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            OnChangeTracking = DataToSendChange
+            Align = Client
+            Size.Width = 269.000000000000000000
+            Size.Height = 265.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Viewport.Width = 265.000000000000000000
+            Viewport.Height = 261.000000000000000000
+          end
+        end
+        object tiDataToSendFiles: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 134.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Files'
+          ExplicitSize.cx = 44.000000000000000000
+          ExplicitSize.cy = 26.000000000000000000
+          object sgDataToSendFiles: TStringGrid
+            Anchors = [akLeft, akTop, akRight, akBottom]
+            CanFocus = True
+            ClipChildren = True
+            Position.Y = 32.000000000000000000
+            Size.Width = 269.000000000000000000
+            Size.Height = 233.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            RowCount = 0
+            Options = [AlternatingRowBackground, ColumnResize, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, AutoDisplacement]
+            Viewport.Width = 265.000000000000000000
+            Viewport.Height = 208.000000000000000000
+            object scName: TStringColumn
+              Header = 'Name'
+            end
+            object scFilename: TStringColumn
+              Header = 'Filename'
+            end
+            object scMimetype: TStringColumn
+              Header = 'Mimetype'
+            end
+          end
+          object btDataToSendFilesAdd: TButton
+            Hint = 'Add a new file'
+            Images = ImageList
+            ImageIndex = 2
+            Position.X = 60.000000000000000000
+            Position.Y = 6.000000000000000000
+            Size.Width = 100.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 5
+            Text = 'Add file'
+            ParentShowHint = False
+            ShowHint = True
+            OnClick = btDataToSendFilesAddClick
+          end
+          object btDataToSendFilesDelete: TButton
+            Enabled = False
+            Hint = 'Delete file selected'
+            Images = ImageList
+            ImageIndex = 1
+            Position.X = 164.000000000000000000
+            Position.Y = 6.000000000000000000
+            Size.Width = 100.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 3
+            Text = 'Delete file'
+            ParentShowHint = False
+            ShowHint = True
+            OnClick = btDataToSendFilesDeleteClick
+          end
+        end
+      end
+    end
+    object gbRESTServer: TGroupBox
+      Position.X = 12.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 289.000000000000000000
+      Size.Height = 73.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'REST Server:'
+      TabOrder = 1
+      object btSend: TButton
+        Anchors = [akTop, akRight]
+        Position.X = 202.000000000000000000
+        Position.Y = 15.000000000000000000
+        TabOrder = 1
+        Text = 'Send'
+        OnClick = btSendClick
+      end
+      object eRESTServerAdress: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akTop, akRight]
+        TabOrder = 4
+        Position.X = 6.000000000000000000
+        Position.Y = 15.000000000000000000
+        Size.Width = 193.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'REST API URL'
+      end
+      object eRESTServerUsername: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 3
+        Position.X = 7.000000000000000000
+        Position.Y = 42.000000000000000000
+        Size.Width = 141.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Username'
+      end
+      object eRESTServerPassword: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 2
+        Password = True
+        Position.X = 152.000000000000000000
+        Position.Y = 42.000000000000000000
+        Size.Width = 130.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Password'
+      end
+    end
+  end
+  object pAnswer: TPanel
+    Align = Right
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Position.X = 312.000000000000000000
+    Size.Width = 328.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object gbServerAnswer: TGroupBox
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      Position.X = 14.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 303.000000000000000000
+      Size.Height = 458.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'REST Server answer:'
+      TabOrder = 0
+      object mServerAnswer: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        ReadOnly = True
+        Anchors = [akLeft, akTop, akRight, akBottom]
+        Position.X = 8.000000000000000000
+        Position.Y = 15.000000000000000000
+        Size.Width = 287.000000000000000000
+        Size.Height = 434.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 283.000000000000000000
+        Viewport.Height = 430.000000000000000000
+      end
+    end
+  end
+  object PopupMenu: TPopupMenu
+    Images = ImageList
+    Left = 366
+    Top = 306
+    object miAddModel: TMenuItem
+      Action = aAddModel
+      Enabled = True
+      ImageIndex = 2
+    end
+    object miSaveModel: TMenuItem
+      Action = aSaveModel
+      Enabled = False
+      ImageIndex = 0
+    end
+    object miRenameModel: TMenuItem
+      Action = aRenameModel
+      Enabled = False
+      ImageIndex = 4
+    end
+    object miReorderModel: TMenuItem
+      Action = aOrderModel
+      Enabled = False
+      ImageIndex = 5
+    end
+    object miSeparator: TMenuItem
+      Text = '-'
+    end
+    object miDeleteModel: TMenuItem
+      Action = aDeleteModel
+      Enabled = False
+      ImageIndex = 1
+    end
+  end
+  object RESTClient: TRESTClient
+    Authenticator = HTTPBasicAuthenticator
+    Params = <>
+    SecureProtocols = [TLS12]
+    Left = 364
+    Top = 48
+  end
+  object RESTRequest: TRESTRequest
+    Client = RESTClient
+    Method = rmPOST
+    Params = <>
+    Response = RESTResponse
+    Timeout = 10000
+    OnAfterExecute = RESTRequestAfterExecute
+    SynchronizedEvents = False
+    OnHTTPProtocolError = RESTRequestHTTPProtocolError
+    Left = 476
+    Top = 48
+  end
+  object RESTResponse: TRESTResponse
+    Left = 476
+    Top = 104
+  end
+  object HTTPBasicAuthenticator: THTTPBasicAuthenticator
+    Left = 476
+    Top = 160
+  end
+  object ImageList: TImageList
+    Source = <
+      item
+        MultiResBitmap.TransparentColor = 536870912
+        MultiResBitmap = <
+          item
+            Width = 16
+            Height = 16
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+              61000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              01A249444154384FD592DB2BC36118C7BF3FB3499A39A694921876819643B2C4
+              3226524E890B2D71E32F5844B822379BD31229C9054A726865B97341A2C5E49C
+              C3D4D6D0D68CC4E6C1ACD52F96C595CFCDDBF37CDFEF53EFF37EF1FF90A90BA8
+              A6BF9A3C25023CA75F48D5125216B721389283F2EE32F710C6ADF841A12A8F94
+              25ED98DC1887E9D98CB067015C16AE47FD817C552E694F97A961B192A2267814
+              331C42E2D60CEF33DCC83552920F17B19BEF484724A4352E9162BD9692B4D114
+              3F154929CD42F6BD3A4D15AD9EADD0FCF10C4906B3BD62C95821CD5E4D53AB5E
+              41399B2994BE9040C92D6C33A350355250221011170E51681A9C78C1C0CC10F8
+              817C34D52B6078D463DFA587C3F204CB9C03478327ACBDB98BD20E39DD0A2F21
+              CA1441CCCF0297E141C00DC7816B176738C2BDF50117931618FA0EBE2CDDDB90
+              75CAC896758DD46C2184BC5480C3C0C83987D56EC7F1A811FAAEBD6F7FCC9B03
+              5D8F8E09DB8E85E9F00E3702331C7C1B5E5F80F309B34FF307AC20E9BAD698C0
+              F510DCEED8116C0DC589C684ADF61D9F669F94F5CAA962F43369BFC649CEBF0D
+              F00FE00D37ECA2F1BB72282D0000000049454E44AE426082}
+            FileName = 'Y:\mes_programmes\my_club_beta\images\button_ok.bmp'
+          end>
+        Name = 'button_ok'
+      end
+      item
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 16
+            Height = 16
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+              61000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              026349444154384FAD92DD4B537118C7BFDBD94B6B7A36378FDBC488DE642624
+              68D308AD2C3023A8E8A22EBB0C6FFA17A2BFA0A22BA32BC9D1456650822664D9
+              C016615B8E74BE35439A7614E7DCE6A6B9A767C7E3F260977DE0C3F93DCFF37B
+              7EFC5E0EFE2BDD62D9ED80805635DCC3D43E9CEE2E113BD4508B11A8A3D82251
+              7F3F752AE15EA8EB29E55FBD210BE05353454E75363411052788C2DF29DA7A96
+              D47C91E9B64B44A118D1E80C3DBED05EA8B714F23AF670EEF98719532C0ABCEE
+              C596D501C17712E3BD4F703C3C56A82354DF4475ED37B01109C384DF40750DC6
+              E69770E2D9C35A6582411433A123D596DAE824E4CD2C60DE0FA9DC8995ABD790
+              8DC7E1090621279340260DC964C49CDD8E430BCBA0CD94D2BF4364D6E1246EA7
+              77EC7B3671AC86648F8786791C6033EC04CB73E7B65BB68F504402822F4A4B1A
+              136B292C702C6CA7956F39ABD30BB895DFFA2603B54A81D1AB5F052E34F5B90F
+              0CD8AA0E22CF31EF4631CD964A2EBC95DC81DDCD05340B1438BF96B8984BA7B0
+              C2E37576834DB0C95C166D4643330F35688EF0B1A29272F24F4CF1299D1CF391
+              94EDC7D9147B543022EF74A0F9D762B14F19DCE58768B15A37C54C063211CA38
+              5758205DDF009DD984929111E54E56D92A8309099B0543CBABD67BFC2E18F4FA
+              9C1BF71FD027BEDD0136C2F296C96FB7D340A9B9A7CF66E9F23B6CB4C6B9103B
+              C87E6197AEDFA447164B25AF090C978BF49593D36C8EF55748346F1626952213
+              D3EB47FD2E37F12F44B36C54B4D2678F5BFBB70E7181BC35E4F77A6941F7F79D
+              77F821E8C6BB2B5C44AE4A0AF25C35ADA5E7CA65A23B1DFF2E32EBCD8DF4F2DC
+              995D75E00FCE73F8F2D7CBB8C30000000049454E44AE426082}
+            FileName = 'Y:\mes_programmes\my_club_beta\images\button_cancel.png'
+          end>
+        Name = 'button_delete'
+      end
+      item
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 16
+            Height = 16
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+              61000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              025149444154384F7593CB6ED3401885CF5CEC719C34699AD234A1524B5A159A
+              A6088454445421E505E029D88184041BDE8127E02DE8860D62C1A2820D20548A
+              A0A537D10BA449D35BE2EB0CE3CA4204CC37962C9FF3EBF7FCC7638204EA8FEB
+              9306351645C6920404CEA94F7DD9BBB3F474E95B5CF21B1ADFFB509E4A65CBD9
+              EAF88D726DAA36512B1473554F6BB1DD476283D00DE5D0740EE5461EE5ABC328
+              948610682DB6FB486C10A1388167FA68D2267AB20733D6FF26B14120B96B5286
+              0196866F3B089877AEC5761F7CE1E1422594CC667A8B1EA205B8274E65D5DD90
+              6318A65D72823DD99208D4CCFC8379715EA09182518BB22EB9F5A4BE82317F26
+              33636104250C8585685E74679D80143BBCBD7984F4DB42E039925B29014E0D98
+              CC446BBF83F6C1E167EEE8097FA4B7E04FB771A5741982CE22AB57CBDBE57BEB
+              4DC85505371F72BB6801B6D40D14D24CE0EC3D033BA2925C7B747D7973F8EBEC
+              49F60CB98B0019D5FBD389A92E90D9CE6150E531309545BE9C43C61CD02F3061
+              708EF66B0707EF8E3FB1B1FAC47D61880BA620309D348C431BE67E067E9B069D
+              EFC7B45BE9C0DDB082D2CE38C52E87BF4DE16D01A75B2E9CA3A045A2105914A2
+              62E7DFD9D3218990575A733F9FAF153F50BB068C7F9C93FC45EE6E68633DAA89
+              6022A44C87183FF6D378D098AC3EABAAC1975097DA29757BF1A6AADF6B4CC676
+              1F89E7C0F78800D379A4F56E8405C61828F5456CF7F1DF9308A2F43CFA123D28
+              238CC57F49FE17F47CA9A60D6B378FD4AB11046B446B2CB136512426ED992D73
+              65F4CBC4B2FDA6B01CEE9095488BED3F007E01176AE07806485B220000000049
+              454E44AE426082}
+            FileName = 'Y:\mes_programmes\my_club_beta\images\edit_add16.png'
+          end>
+        Name = 'button_add'
+      end
+      item
+        MultiResBitmap.Height = 17
+        MultiResBitmap.Width = 17
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 17
+            Height = 17
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000110000001108060000003B6D47
+              FA000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              02BE49444154384F8D935D48536118C7FFE7ECECABC42ED626D2200BBB9140A9
+              8B144B2DCB1084F91138138DA0108DC0C248693130832EEC2E93D2CC2290C440
+              99185837E1308C2E561786341BA5D36563B9E6D6CE3ECEDB7BDE6D11B3C21F9C
+              F33E3CCF739EF7F93A9CD168DC5F545474381289840921523C1E473A922425A5
+              042A958A572A955A87C3F1CAE974CEC362B13CB1DBEDC4363141A2D1288DB375
+              9A9B9B2D7250DEE57239ED33333876BC1CE3CFC6D84D5BC5EFF7FBE4938FC562
+              91AB9D9D78343C0CB77B05ABCB4B0887C3A07AE628935E4E0A5A3A33F014A668
+              6DBB8086C6D3181AB88F35CF0A0441607A9994CFBF901BC4846A9309E67A33AE
+              5CBB8EC7430FE0712F33FD56E0E3D128133ABBBA70FE5C0BE4A096EE9B18E8BF
+              83D8D217668B864576A6939A241F4BD65B5858085E2DC066B381361EADED1DF8
+              3EF214EE6A135E14E483FCA52FA95EF129C1EBF582D0C8B9FB72110804A0D56A
+              E1EDEB43E69926047FF831597B0A816084F9A64333494C41A7D3A1AEAE0E39BB
+              7310FA19423018C454C1017CEEB88C4ADA6CCCCDE1C3A58BCC371D9E8B73ACF5
+              A228B20F43A1104D9DB011B78D8EE1EDC936CCD25E95F4DEC2AE6F6BB89795B5
+              B9B49A9A9ADB89FDA33B2F49847E4C6820F6C8F8D64364FE6E3F19CFCE26E2A2
+              93B8EBCDA457AF27FEF9F7A4A2A2A25D8E21180C86C5C1C14137C7714ABA0FF2
+              722868204E36BA37442E4BA3908343555CAC7E7EA4445D39FB1A8D377AF0B0B4
+              1C2AA3C128FB7156AB952F2B2B53515943C7BB8DFE5C1A9A8030EDD8D879227F
+              FBBAEC2467442F887F349916F66666E2E0F4347CDD3D78393589268F875DB899
+              D2D18CA4B489115A96232F8F889F5CC46D6E200B478BC793A63FC8B3CA59FD97
+              76ADD6BF545545565B5AC8D98C0CFDEF54040887388D6E0F17FEFA8E8E4BCF2B
+              A0A5FB181539247640A156D0970A7145401D0BACEEE0F95A9F24CDC48037BF00
+              1DEF7571C9FB5C170000000049454E44AE426082}
+            FileName = 'Y:\mes_programmes\my_club_beta\images\panel_settings.png'
+          end>
+        Name = 'panel_settings'
+      end
+      item
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 16
+            Height = 16
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+              61000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              01F749444154384FA5934D4F13511486DFC280144B3BD840DB8044366E5CBA34
+              C60D7161FA1536242626AEBBE82FF00F98B8F057B873D196B0058D092A2E4C08
+              6E149D32FDA2D082B4B673E7EB7AE6CE60870C311ADEE49DCC4CEE79CF33E7CE
+              0DC153A954E2DEED3F2B97CBFDA91701FFA3F38663A2DAA76EA703D6FF054D37
+              C10C4B58376D18966BE7BD698F6003019B5B5B74E5503B1A0E8E87AE8F86A87A
+              AE751946DC9704643319706AB0383B899B373CC727B114BF865B73612CCF4FFF
+              3DA05CA95000179DD40E83D21EE0F98B9778F57A030A11FCA067BF020199741A
+              B66D23254F20191B47EDCB0EEEDC5E46FAE17D41B5149FA20F1C291050595F77
+              0968066FDFBCC3B7AA82D629C389264125AA2ACDC4AF0B014E618666605916F6
+              77DFE3FBFE5744233378FA78150BB313C28B3413BF0201E572199FF7F6A0280A
+              425331DC7DF008F5138366E2582732E6AD767521C0300C249229345B2D84A7C3
+              78B2964772660CC9E83852348F0559121497EE82D3FDE3CE27A8072A86FD1EEE
+              ADE4D1EAD9C2CD330BCD9F26EAA7266A44E3970828140A91684C46BDD104B74D
+              E4B359CC4580F9EBAE139110120E09D92109EC42B77DD4F8B0BD0DCB6088C9B2
+              A069F780C33E171624672E498328FC014292243D2B168B54C7F96030E09AA671
+              C618D7755D9866C3696738FD1F628DA3F3C374C5E39C0BFD067A894D60552CF7
+              420000000049454E44AE426082}
+            FileName = 'Y:\mes_programmes\my_club_beta\images\kedit.png'
+          end>
+        Name = 'kedit'
+      end
+      item
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 16
+            Height = 16
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+              61000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              028E49444154384F6D534B6B144110FEBA672633B326AE076F06BD8892058907
+              F5125089981FE025F122888277CF0A0ABE9020211014C206D13CC05B4E3E4EA2
+              44498C22628444909C2218118D3BB33B8FEEF6EBC92659C5DAF9B66B7AAAAAEB
+              ABAA163746C6AB71543F982669920330790E3E30FCE59A8AE043B8F0E0050E02
+              8FAB2BA020FC8E307C2306EF4D2EECE9ECACD4930499D2504A21CF3483105A15
+              015C29E13A12DBDB43F8BEC777079EEF627169F983B872F77E7CFA645FB816C5
+              4580DC06C915B254236B06F018C0711D84740E020F3EF552A90D134F5ED6C5A5
+              6BA371A5FB4098659680CD974BAB98E61F79146A533CC7C1E2978F75717D682A
+              3A777EA0C4C05BCE3CB8D025B1E1D51A987B4C14D5C947B1D4DA206C03CAEA1B
+              CABF89FA0ACA6D09CA6E0DE5DA5794A355E23B75AE056843DB767F3D962B8481
+              B2A7CCDD842E3D865EDD0DB76F9ADD48A0DFF542EC70009EB629B633B51EA8DE
+              2A933290861FB5357053C8CA2204D74DC34043762D40EE6FC13EDAC8BCF03174
+              964E87645FC92989A15EF5536927771296DCAC7543CD0C40CD12AF4F41CD9F25
+              FAA18D5C2F11DB895BA353D15A62FE16D520A2E6CBFFA5469FC1074F235747EC
+              BB4DF9ED3054FC1968FC8073A20AD3F8053D730128EDB45FB7C4524B7F02C71F
+              B2339A03B66D9D021A4B708E8C40BD38462326E806DC5C8673781CB023B22196
+              FBFC99CDF64A4B57B0DF26CDA09EB3EAAACC0D0E050B24440A3D7B147ABE153D
+              EC106F829D11EB3C3836AD524B4A91549C1993D60B8EACB0310DEED5F37F401B
+              DA5A9FE189674A5CBE33F6BE6BEFAE4AC4CB57E4645333CDFC6CA9A97A896F2F
+              27B2201156B787BBA5CCFBB4B4B2202E5E1DBACDBE1CCA0CF3E54DDC9056DA8E
+              940C6007CE08ABDBE93342068EC4DC1F9581933B107C65BC0000000049454E44
+              AE426082}
+            FileName = 'Y:\mes_programmes\my_club_beta\images\list.png'
+          end>
+        Name = 'list'
+      end>
+    Destination = <
+      item
+        Layers = <
+          item
+            Name = 'button_ok'
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'button_delete'
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'button_add'
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'panel_settings'
+            SourceRect.Right = 17.000000000000000000
+            SourceRect.Bottom = 17.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'kedit'
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'list'
+          end>
+      end>
+    Left = 366
+    Top = 240
+  end
+  object ActionList: TActionList
+    Images = ImageList
+    Left = 366
+    Top = 370
+    object aAddModel: TAction
+      Text = 'Add model'
+      Hint = 'Add a new model'
+      ImageIndex = 2
+      OnExecute = aAddModelExecute
+      ImageIndex = 2
+    end
+    object aSaveModel: TAction
+      Text = 'Save model'
+      Enabled = False
+      Hint = 'Save modified model'
+      ImageIndex = 0
+      OnExecute = aSaveModelExecute
+      ImageIndex = 0
+    end
+    object aRenameModel: TAction
+      Text = 'Rename model'
+      Enabled = False
+      Hint = 'Rename selected model'
+      ImageIndex = 4
+      OnExecute = aRenameModelExecute
+      ImageIndex = 4
+    end
+    object aOrderModel: TAction
+      Text = 'Order model'
+      Enabled = False
+      ImageIndex = 5
+      OnExecute = aOrderModelExecute
+      ImageIndex = 5
+    end
+    object aDeleteModel: TAction
+      Text = 'Delete model'
+      Enabled = False
+      Hint = 'Delete model selected'
+      ImageIndex = 1
+      OnExecute = aDeleteModelExecute
+      ImageIndex = 1
+    end
+  end
+end

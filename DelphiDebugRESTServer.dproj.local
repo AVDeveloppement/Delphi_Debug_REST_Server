@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/10/13 15:52:43.000.381,=Y:\mes_programmes\Unit1.pas</Transaction>
+    <Transaction>2020/10/13 15:52:57.000.214,=Y:\mes_programmes\Unit1.pas</Transaction>
+    <Transaction>2020/10/13 15:53:26.000.156,Y:\mes_programmes\Main.fmx=Y:\mes_programmes\Unit1.fmx</Transaction>
+    <Transaction>2020/10/13 15:53:26.000.156,Y:\mes_programmes\Main.pas=Y:\mes_programmes\Unit1.pas</Transaction>
+    <Transaction>2020/10/13 15:54:08.000.477,Y:\mes_programmes\AVHomeDomoticServerDebug.dproj=Y:\mes_programmes\Project1.dproj</Transaction>
+    <Transaction>2020/10/13 15:55:16.000.545,D:\Arduino\Gestion_volet_somfy_io_garage_somfy_rts_portail_bft\AV_Home_Domotic_Server_Debug\Main.pas=Y:\mes_programmes\Main.pas</Transaction>
+    <Transaction>2020/10/13 15:55:16.000.545,D:\Arduino\Gestion_volet_somfy_io_garage_somfy_rts_portail_bft\AV_Home_Domotic_Server_Debug\Main.fmx=Y:\mes_programmes\Main.fmx</Transaction>
+    <Transaction>2020/10/13 15:55:18.000.938,D:\Arduino\Gestion_volet_somfy_io_garage_somfy_rts_portail_bft\AV_Home_Domotic_Server_Debug\AVHomeDomoticServerDebug.dproj=Y:\mes_programmes\AVHomeDomoticServerDebug.dproj</Transaction>
+    <Transaction>2020/10/28 10:07:21.000.426,=D:\Arduino\Gestion_volet_somfy_io_garage_somfy_rts_portail_bft\AV_Home_Domotic_Server_Debug\Unit1.pas</Transaction>
+    <Transaction>2020/10/28 11:15:13.000.259,D:\Arduino\Gestion_volet_somfy_io_garage_somfy_rts_portail_bft\AV_Home_Domotic_Server_Debug\Unit1.fmx=D:\Arduino\Gestion_volet_somfy_io_garage_somfy_rts_portail_bft\AV_Home_Domotic_Server_Debug\SendFile.fmx</Transaction>
+    <Transaction>2020/10/28 11:15:13.000.259,D:\Arduino\Gestion_volet_somfy_io_garage_somfy_rts_portail_bft\AV_Home_Domotic_Server_Debug\Unit1.pas=D:\Arduino\Gestion_volet_somfy_io_garage_somfy_rts_portail_bft\AV_Home_Domotic_Server_Debug\SendFile.pas</Transaction>
+    <Transaction>2020/11/21 10:51:45.000.818,=D:\Arduino\Gestion_volet_somfy_io_garage_somfy_rts_portail_bft\AV_Home_Domotic_Server_Debug\Unit1.pas</Transaction>
+    <Transaction>2020/11/21 10:52:06.000.461,D:\Arduino\Gestion_volet_somfy_io_garage_somfy_rts_portail_bft\AV_Home_Domotic_Server_Debug\OrderModel.pas=D:\Arduino\Gestion_volet_somfy_io_garage_somfy_rts_portail_bft\AV_Home_Domotic_Server_Debug\Unit1.pas</Transaction>
+    <Transaction>2020/11/21 10:52:06.000.461,D:\Arduino\Gestion_volet_somfy_io_garage_somfy_rts_portail_bft\AV_Home_Domotic_Server_Debug\OrderModel.fmx=D:\Arduino\Gestion_volet_somfy_io_garage_somfy_rts_portail_bft\AV_Home_Domotic_Server_Debug\Unit1.fmx</Transaction>
+    <Transaction>2020/11/21 11:39:38.000.573,=D:\Arduino\Gestion_volet_somfy_io_garage_somfy_rts_portail_bft\AV_Home_Domotic_Server_Debug\Unit1.pas</Transaction>
+    <Transaction>2020/11/21 11:39:49.000.087,D:\Arduino\Gestion_volet_somfy_io_garage_somfy_rts_portail_bft\AV_Home_Domotic_Server_Debug\Unit1.pas=D:\Arduino\Gestion_volet_somfy_io_garage_somfy_rts_portail_bft\AV_Home_Domotic_Server_Debug\SendModel.pas</Transaction>
+    <Transaction>2020/12/24 11:24:39.190,Y:\mes_programmes\Arduino\Gestion_volet_somfy_io_garage_somfy_rts_portail_bft\Delphi_Debug_REST_Server\DelphiDebugRESTServer.dproj=Y:\mes_programmes\Arduino\Gestion_volet_somfy_io_garage_somfy_rts_portail_bft\Delphi_Debug_REST_Server\AVHomeDomoticServerDebug.dproj</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile Android="" Android64=""/>
+	</ActiveMobileDevice>
+</BorlandProject>

@@ -1,0 +1,16 @@
+﻿[lvModel]
+Coordinates=10,10,89,195
+Visible=True
+
+[btCancel]
+Coordinates=283,10,57,51
+
+[btOk]
+Coordinates=426,10,40,51
+
+[ImageList16]
+Coordinates=37,253,73,33
+
+[]
+Coordinates=358,10,52,51
+
