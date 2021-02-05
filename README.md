@@ -13,7 +13,7 @@ The programm use the components:
 
 ![Screenshot](/images/Delphi_Debug_REST_Server_screen_1.jpg?raw=true "Screenshot")
 
-Any idea :point_up: Questions :question: Go to :point_right: [Discussions](https://github.com/AVDeveloppement/SQL_Database_to_model.pas/discussions "Discussions") :point_left:
+Any idea :point_up: Questions :question: Go to :point_right: [Discussions](https://github.com/AVDeveloppement/Delphi_Debug_REST_Server/discussions "Discussions") :point_left:
 
 License: [Creative Commons Attribution-ShareAlike 4.0 International Public](https://github.com/AVDeveloppement/Delphi_Debug_REST_Server/raw/main/license.txt "Creative Commons Attribution-ShareAlike 4.0 International Public License")
 
