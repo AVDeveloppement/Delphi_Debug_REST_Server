@@ -1,3 +1,8 @@
 *.zip
 configuration.ini
 DelphiDebugRESTServer.exe
+*.local
+*.identcache
+*.dsk
+/Win32
+/__history

@@ -93,7 +93,6 @@ Var
 Implementation
 
 {$R *.fmx}
-{$R *.SmXhdpiPh.fmx ANDROID}
 
 Resourcestring
   rsFMMAIN_CAPTION = 'Debug REST Server';
